@@ -1,0 +1,53 @@
+body {
+  background-color: rgb(219, 195, 146);
+  margin: 0%;
+}
+
+header {
+  overflow: hidden;
+  background-color: rgb(132, 62, 2);
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+header a {
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 1%;
+  text-decoration: none;
+}
+
+header a:hover {
+  animation-duration: 0.3s;
+  animation-name: fadein;
+  background-color: rgb(224, 202, 163);
+  color: black;
+}
+
+header img {
+  float: left;
+  width:3%;
+  margin:0.5%;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+  margin-top: 5%;
+}
+
+.row img {
+  width: 33.3%;
+}
+
+@keyframes fadein {
+  from {
+    background-color: rgb(132, 62, 2);
+  }
+
+  to {
+    background-color: rgb(224, 202, 163);
+  }
+}

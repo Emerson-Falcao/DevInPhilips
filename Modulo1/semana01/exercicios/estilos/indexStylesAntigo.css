@@ -1,0 +1,104 @@
+body {
+    background-color: rgb(219, 195, 146);
+    margin: 0%;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: rgb(132, 62, 2);
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.navbar a {
+    float: right;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    animation-duration: 0.3s;
+    animation-name: slidein;
+    background-color: rgb(224, 202, 163);
+    color: black;
+}
+
+.header {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    background-image: url(https://pbs.twimg.com/media/FO7_pg-WUAgHmob?format=jpg&name=large);
+    background-repeat: no-repeat;
+    padding: 2%;
+    margin: 0%;
+}
+
+hr {
+    margin-top: 0.5%;
+}
+
+p {
+    font-size: 14px;
+}
+
+.anchorButton {
+    border: 2px solid black;
+    border-radius: 10%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: rgb(132, 62, 2);
+    width: 8%;
+}
+
+.anchorButton:hover {
+    background: rgb(224, 202, 163);
+}
+
+.main {
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 2%;
+    width: 70%;
+    border: 3px solid rgb(235, 235, 235);
+    background-color: rgb(235, 235, 235);
+    padding: 2%;
+}
+
+iframe {
+    border: none;
+}
+
+#embedMainPage {
+    width: 100%;
+    height: 375px;
+}
+
+.footer {
+    margin: auto;
+    margin-bottom: 2%;
+    width: 72%;
+    border: 3px solid rgb(235, 235, 235);
+    background-color: rgb(235, 235, 235);
+    padding: 1%;
+    bottom: 0;
+}
+
+.footerP {
+    font-size: 10px;
+    text-align: center;
+}
+
+@keyframes slidein {
+    from {
+        background-color: rgb(132, 62, 2);
+    }
+
+    to {
+        background-color: rgb(224, 202, 163);
+    }
+}
