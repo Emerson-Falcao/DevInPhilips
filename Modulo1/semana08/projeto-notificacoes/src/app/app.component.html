@@ -6,6 +6,7 @@
       <small>{{notificacao.data.getDate()}}/{{notificacao.data.getMonth()}}/{{notificacao.data.getFullYear()}}</small>
     </div>
     <p class="mb-1">{{notificacao.subtitulo}}</p>
+    <button type="button" class="btn btn-outline-danger" (click)="notificacaoLida(notificacao)">{{notificacao.lido?'Lido':'Não lido'}}</button>
   </a>
 </div>
 <ntap-footer></ntap-footer>

@@ -9,4 +9,10 @@ import { NOTIFICACOES } from './mocks/notificacoes-mock';
 export class AppComponent {
   title = 'projeto-notificacoes';
   notificacoes = NOTIFICACOES;
+
+  notificacaoLida(notificacao:any){
+    notificacao.lido = true
+    console.log(notificacao);
+    
+  }
 }
