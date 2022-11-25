@@ -1,25 +1,11 @@
 <ntap-notif-header></ntap-notif-header>
 <div class="list-group">
-  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start" *ngFor="let notificacao of notificacoes">
     <div class="d-flex w-100 justify-content-between">
-      <h5 class="mb-1">Novo pedido de amizade!</h5>
-      <small>25/11/2022</small>
+      <h5 class="mb-1">{{notificacao.titulo}}</h5>
+      <small>{{notificacao.data.getDate()}}/{{notificacao.data.getMonth()}}/{{notificacao.data.getFullYear()}}</small>
     </div>
-    <p class="mb-1">Uma pessoa te mandou um pedido de amizade!</p>
-  </a>
-  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-    <div class="d-flex w-100 justify-content-between">
-      <h5 class="mb-1">Curtida!</h5>
-      <small>24/11/2022</small>
-    </div>
-    <p class="mb-1">Sua postagem foi curtida</p>
-  </a>
-  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-    <div class="d-flex w-100 justify-content-between">
-      <h5 class="mb-1">Novo comentário!</h5>
-      <small>24/11/2022</small>
-    </div>
-    <p class="mb-1">Sua postagem recebeu um novo comentário</p>
+    <p class="mb-1">{{notificacao.subtitulo}}</p>
   </a>
 </div>
 <ntap-footer></ntap-footer>
