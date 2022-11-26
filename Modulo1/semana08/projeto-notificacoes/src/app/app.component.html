@@ -1,6 +1,6 @@
 <ntap-notif-header></ntap-notif-header>
-<div class="list-group">
-  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start" *ngFor="let notificacao of notificacoes">
+<div class="list-group" >
+  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start" *ngFor="let notificacao of notificacoes" [ngClass]="notificacao.lido?'lido':'naoLido'">
     <div class="d-flex w-100 justify-content-between">
       <h5 class="mb-1">{{notificacao.titulo}}</h5>
       <small>{{notificacao.data.getDate()}}/{{notificacao.data.getMonth()}}/{{notificacao.data.getFullYear()}}</small>

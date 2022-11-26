@@ -12,7 +12,5 @@ export class AppComponent {
 
   notificacaoLida(notificacao:any){
     notificacao.lido = true
-    console.log(notificacao);
-    
   }
 }
