@@ -6,6 +6,8 @@ import { FormComponent } from './form/form.component';
 import { ModalComponent } from './modal/modal.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ItemCardComponent } from './item-card/item-card.component';
+import { FormEmailComponent } from './form-email/form-email.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -13,10 +15,12 @@ import { ItemCardComponent } from './item-card/item-card.component';
     FormComponent,
     ModalComponent,
     NavbarComponent,
-    ItemCardComponent
+    ItemCardComponent,
+    FormEmailComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
