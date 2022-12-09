@@ -11,6 +11,6 @@ export class ButtonGroupComponent {
     @Output() evento:EventEmitter<string> = new EventEmitter();
 
     clickFiltro(event:any){
-      this.evento.emit()
+      this.evento.emit(event)
     }
 }

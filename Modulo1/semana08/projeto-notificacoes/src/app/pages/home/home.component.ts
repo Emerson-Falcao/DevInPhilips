@@ -11,4 +11,8 @@ export class HomeComponent {
   notificacaoLida(notificacao:any){
     notificacao.lido = true
   }
+
+  clickFiltro(evento:any){
+    console.log(evento)
+  }
 }
