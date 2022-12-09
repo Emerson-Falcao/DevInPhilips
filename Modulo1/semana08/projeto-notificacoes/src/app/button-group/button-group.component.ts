@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'ntap-button-group',
@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class ButtonGroupComponent {
     buttons = ['Todos','Lidos','Não Lidos']
+
+    @Output() evento:EventEmitter<string> = new EventEmitter();
+
+    clickFiltro(event:any){
+      this.evento.emit()
+    }
 }
