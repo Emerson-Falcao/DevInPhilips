@@ -8,7 +8,7 @@ const routes:Routes = [
   {path:'home/lidos',component:HomeComponent},
   {path:'home/nao-lidos',component:HomeComponent},
   {path:'home/todos',component:HomeComponent},
-  {path:'/',component:HomeComponent},
+  {path:'',component:HomeComponent},
   {path:'sobre',component:AboutComponent}
 ]
 
