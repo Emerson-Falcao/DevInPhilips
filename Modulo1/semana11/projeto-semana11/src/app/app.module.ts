@@ -4,11 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CapitalizePhilipsPipe } from './capitalize-philips.pipe';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CapitalizePhilipsPipe
+    CapitalizePhilipsPipe,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
