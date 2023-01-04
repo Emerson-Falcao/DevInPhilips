@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { CapitalizePhilipsPipe } from './capitalize-philips.pipe';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FotosComponent } from './fotos/fotos.component';
+import { ModalComponent } from './modal/modal.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CapitalizePhilipsPipe,
     NavbarComponent,
-    FotosComponent
+    FotosComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
