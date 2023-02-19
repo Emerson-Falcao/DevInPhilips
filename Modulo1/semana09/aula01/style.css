@@ -1,0 +1,19 @@
+body{
+    background-color: rgb(11,94,196);
+}
+main{
+    
+    display: flex;
+    flex-direction: row;
+}
+form{
+    background-color: #F6F6F6;
+}
+.side-panel{
+    background-color: #F6F6F6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    color: white;
+}
