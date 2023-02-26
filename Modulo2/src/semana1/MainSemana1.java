@@ -38,6 +38,9 @@ public class MainSemana1 {
         System.out.println("-------------------------");
         System.out.println("Exercicio 8:");
         Exercicio8.exercicio8();
+        System.out.println("-------------------------");
+        System.out.println("Exercicio :");
+        Exercicio9.exercicio9();
     }
 
 }
