@@ -29,6 +29,9 @@ public class MainSemana1 {
         Exercicio5.exercicio5(teste5);
         int[] teste6 = {20,10, 30};
         Exercicio5.exercicio5(teste6);
+        System.out.println("-------------------------");
+        System.out.println("Exercicio 6:");
+        Exercicio6.exercicio6();
     }
 
 }
