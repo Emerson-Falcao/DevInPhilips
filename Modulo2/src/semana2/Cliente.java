@@ -8,6 +8,17 @@ public class Cliente {
     private double altura;
     private int idade;
 
+    public Cliente(double peso, double altura) {
+        this.peso = peso;
+        this.altura = altura;
+    }
+
+    public Cliente(double peso, double altura, int idade) {
+        this.peso = peso;
+        this.altura = altura;
+        this.idade = idade;
+    }
+
     public double getAltura() {
         return altura;
     }

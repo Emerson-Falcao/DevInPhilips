@@ -12,6 +12,15 @@ public class Clinica {
     private int codigoClinica;
     private ArrayList<Cliente> clientes;
 
+    public Clinica(String nomeDono) {
+        this.nomeDono = nomeDono;
+    }
+
+    public Clinica(String nomeDono, ArrayList<Cliente> clientes) {
+        this.nomeDono = nomeDono;
+        this.clientes = clientes;
+    }
+
     public ArrayList<Cliente> getClientes() {
         return clientes;
     }
