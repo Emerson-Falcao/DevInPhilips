@@ -5,13 +5,60 @@ import java.util.ArrayList;
 
 public class Clinica {
 
-    String nomeDono;
-    String nomeClinica;
-    String cnpj;
-    String endereco;
-    int codigoClinica;
-    ArrayList<Cliente> clientes;
+    private String nomeDono;
+    private String nomeClinica;
+    private String cnpj;
+    private String endereco;
+    private int codigoClinica;
+    private ArrayList<Cliente> clientes;
 
+    public ArrayList<Cliente> getClientes() {
+        return clientes;
+    }
+
+    public void setClientes(Cliente cliente) {
+        this.clientes.add(cliente);
+    }
+
+    public String getCnpj() {
+        return cnpj;
+    }
+
+    public void setCnpj(String cnpj) {
+        this.cnpj = cnpj;
+    }
+
+    public int getCodigoClinica() {
+        return codigoClinica;
+    }
+
+    public void setCodigoClinica(int codigoClinica) {
+        this.codigoClinica = codigoClinica;
+    }
+
+    public String getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
+    }
+
+    public String getNomeClinica() {
+        return nomeClinica;
+    }
+
+    public void setNomeClinica(String nomeClinica) {
+        this.nomeClinica = nomeClinica;
+    }
+
+    public String getNomeDono() {
+        return nomeDono;
+    }
+
+    public void setNomeDono(String nomeDono) {
+        this.nomeDono = nomeDono;
+    }
     
     public double calculoIMC(double peso, double altura){
         
