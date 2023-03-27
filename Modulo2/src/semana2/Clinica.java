@@ -89,4 +89,17 @@ public class Clinica {
         return imc;
     }
     
+    public double tratamento(int idCliente){
+        
+        double peso = 0;
+        
+        if(idCliente > this.clientes.size())
+            System.out.println("Cliente não encontrado");
+        else{
+            this.clientes.get(idCliente).setPeso(this.clientes.get(idCliente).getPeso()-5);
+            peso = this.clientes.get(idCliente).getPeso();
+        }
+        return peso;
+    }
+    
 }
