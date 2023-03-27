@@ -1,5 +1,7 @@
 package semana2;
 
+import java.util.ArrayList;
+
 
 public class Clinica {
 
@@ -8,6 +10,7 @@ public class Clinica {
     String cnpj;
     String endereco;
     int codigoClinica;
+    ArrayList<Cliente> clientes;
 
     
     public double calculoIMC(double peso, double altura){
