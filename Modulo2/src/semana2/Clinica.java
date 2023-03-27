@@ -115,4 +115,11 @@ public class Clinica {
         return peso;
     }
     
+    public ArrayList<Cliente> listagem(){
+        for(Cliente cliente : this.clientes){
+            System.out.println(cliente.getNome());
+        }
+        return this.clientes;
+    }
+    
 }
