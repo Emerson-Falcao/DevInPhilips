@@ -6,10 +6,10 @@
 </head>
 <body>
 
-    <h1>Produto</h1>
-    <p>Descrição deste produto</p>
-    <h3>00/00/0000</h3>
-    <h2>R$00,00</h2>
+    <h1 th:text="${produto.nome}"></h1>
+    <p th:text="${produto.descricao}"></p>
+    <h3 th:text="${produto.dtLancamento}"></h3>
+    <h2 th:text="'R$'+${produto.preco}"></h2>
 
 </body>
 </html>
