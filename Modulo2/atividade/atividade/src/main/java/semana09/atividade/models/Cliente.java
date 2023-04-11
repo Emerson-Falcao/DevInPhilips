@@ -5,21 +5,22 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Date;
+
 @Entity
-@Table(name = "produtos")
+@Table(name = "clientes")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Produto {
+public class Cliente {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int ID;
     private String nome;
-    private String descricao;
-    private double preco;
 
-    //int id_categoria;
+    private String cpf;
 
+    private Date dtNascimento;
 
 }
