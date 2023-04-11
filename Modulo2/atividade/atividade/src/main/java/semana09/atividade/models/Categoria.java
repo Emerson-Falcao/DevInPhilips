@@ -6,21 +6,15 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "produtos")
+@Table(name = "categorias")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Produto {
+public class Categoria {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int ID;
     private String nome;
-    private String descricao;
-    private double preco;
-
-    @ManyToOne
-    private Categoria idCategoria;
-
 
 }
