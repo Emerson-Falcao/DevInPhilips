@@ -2,6 +2,7 @@ package semana10.Produto.services;
 
 import org.springframework.stereotype.Service;
 import semana10.Produto.controllers.dtos.ProdutoDTO;
+import semana10.Produto.controllers.dtos.ProdutoEDTO;
 import semana10.Produto.models.ProdutoEntity;
 import semana10.Produto.repo.ProdutoRepository;
 
@@ -38,6 +39,20 @@ public class ProdutoService {
                                                         newProd.getDtLancamento(),
                                                         newProd.getPreco());
         repo.save(produtoEntity);
+    }
+
+    public void editProduto(ProdutoEDTO editProd){
+        ProdutoEntity produtoEntity = repo.findById(editProd.getID()).orElse(null);
+        produtoEntity.setNome(editProd.getNome());
+        produtoEntity.setDescricao(editProd.getDescricao());
+        produtoEntity.setDtLancamento(editProd.getDtLancamento());
+        produtoEntity.setPreco(editProd.getPreco());
+        repo.save(produtoEntity);
+    }
+
+    public void deleteProduto(ProdutoEDTO produtoEDTO){
+        ProdutoEntity produtoEntity = repo.findById(produtoEDTO.getID()).orElse(null);
+        repo.delete(produtoEntity);
     }
 
 }
