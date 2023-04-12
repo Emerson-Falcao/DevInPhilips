@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+  <form action="#" th:action="@{/produtos/cadastrar}" th:object="${produtoDTO}" method="post" >
+
+    <label for="nome">Nome:</label>
+    <input type="text" name="nome" id="nome" th:field="*{nome}">
+    <br>
+    <label for="desc">Descrição:</label>
+    <input type="text" name="desc" id="desc" th:field="*{descricao}">
+    <br>
+    <label for="data">Lançamento:</label>
+    <input type="text" name="data" id="data" th:field="*{dtLancamento}">
+    <br>
+    <label for="preco">Preço:</label>
+    R$<input type="text" name="preco" id="preco" th:field="*{preco}">
+    <br>
+    <input type="submit" value="OK">
+  </form>
+
+</body>
+</html>

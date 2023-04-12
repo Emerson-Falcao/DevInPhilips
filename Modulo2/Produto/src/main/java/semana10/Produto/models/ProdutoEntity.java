@@ -14,12 +14,19 @@ import java.util.Date;
 @NoArgsConstructor
 public class ProdutoEntity {
 
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int ID;
     private String nome;
     private String descricao;
-    private Date dtLancamento;
+    private String dtLancamento;
     private double preco;
 
+    public ProdutoEntity(String nome, String descricao, String dtLancamento, double preco) {
+        this.nome = nome;
+        this.descricao = descricao;
+        this.dtLancamento = dtLancamento;
+        this.preco = preco;
+    }
 }

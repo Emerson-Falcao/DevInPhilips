@@ -13,7 +13,7 @@ public class ProdutoDTO {
 
     private String nome;
     private String descricao;
-    private Date dtLancamento;
+    private String dtLancamento;
     private double preco;
 
 }

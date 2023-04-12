@@ -2,9 +2,12 @@ package semana10.Produto.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import semana10.Produto.controllers.dtos.ProdutoDTO;
+import semana10.Produto.services.ProdutoService;
 
 import java.util.Date;
 
@@ -12,14 +15,27 @@ import java.util.Date;
 @RequestMapping("/produtos")
 public class ProdutoController {
 
+    private final ProdutoService prodService;
+
+    public ProdutoController(ProdutoService prodService){
+        this.prodService = prodService;
+    }
+
     @GetMapping
-    public String requestProdutos(ProdutoDTO pdto, Model model){
-        pdto.setNome("Alvejante");
-        pdto.setDescricao("Produto de Limpeza");
-        pdto.setPreco(10.00);
-        pdto.setDtLancamento(new Date());
-        model.addAttribute("produto",pdto);
+    public String requestProdutos(Model model){
+        model.addAttribute("produtos",prodService.getProdutos());
         return "produtos";
+    }
+
+    @GetMapping("/cadastrar")
+    public String requestFormProduto(ProdutoDTO produtoDTO,Model model){
+        return "criarProduto";
+    }
+
+    @PostMapping("/cadastrar")
+    public String createProduto(@Validated ProdutoDTO produtoDTO, Model model){
+        prodService.createProduto(produtoDTO);
+        return "redirect:/produtos";
     }
 
 }

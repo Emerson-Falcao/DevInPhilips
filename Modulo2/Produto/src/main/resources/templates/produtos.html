@@ -5,11 +5,14 @@
     <title>Title</title>
 </head>
 <body>
-
-    <h1 th:text="${produto.nome}"></h1>
-    <p th:text="${produto.descricao}"></p>
-    <h3 th:text="${produto.dtLancamento}"></h3>
-    <h2 th:text="'R$'+${produto.preco}"></h2>
+    <hr>
+    <div th:each = "produto : ${produtos}">
+        <h1 th:text="${produto.nome}"></h1>
+        <p th:text="${produto.descricao}"></p>
+        <h3 th:text="${produto.dtLancamento}"></h3>
+        <h2 th:text="'R$'+${produto.preco}"></h2>
+        <hr>
+    </div>
 
 </body>
 </html>
