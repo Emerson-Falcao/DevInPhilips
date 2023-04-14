@@ -16,7 +16,12 @@ public class WebSecurityConfig {
     protected SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http.authorizeHttpRequests((authz) -> {
                             try {
-                                authz.anyRequest().authenticated();
+                                authz.anyRequest().authenticated().and()
+                                        .formLogin(form -> form
+                                                .loginPage("/login")
+                                                .defaultSuccessUrl("/produtos", true)
+                                                .permitAll()
+                                        ).logout(logout -> logout.logoutUrl("/logout"));
                             } catch (Exception e) {
                                 throw new RuntimeException(e);
                             }

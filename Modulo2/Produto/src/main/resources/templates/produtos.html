@@ -13,6 +13,9 @@
         <h2 th:text="'R$'+${produto.preco}"></h2>
         <hr>
     </div>
+    <form th:action="@{/logout}" method="post">
+        <input type="submit" value="Sair"/>
+    </form>
 
 </body>
 </html>
