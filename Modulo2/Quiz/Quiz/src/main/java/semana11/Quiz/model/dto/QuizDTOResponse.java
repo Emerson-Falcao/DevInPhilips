@@ -1,40 +1,24 @@
-package semana11.Quiz.model;
+package semana11.Quiz.model.dto;
 
-import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Entity
-@Table(name = "quiz")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class QuizEntity {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long ID;
+public class QuizDTOResponse {
 
     private String nome;
 
     private String descricao;
 
-    public QuizEntity(Long ID, String nome, String descricao) {
-        this.ID = ID;
+    public QuizDTOResponse(String nome, String descricao) {
         this.nome = nome;
         this.descricao = descricao;
     }
 
-    public QuizEntity() {
-    }
-
-    public Long getID() {
-        return ID;
-    }
-
-    public void setID(Long ID) {
-        this.ID = ID;
+    public QuizDTOResponse() {
     }
 
     public String getNome() {
